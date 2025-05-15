@@ -1,12 +1,12 @@
 ---
 title: tim-gouveia-portfolio
-emoji: 🐳
+emoji: 🎙️
 colorFrom: purple
 colorTo: red
 sdk: static
 pinned: false
 tags:
-  - deepsite
+  - Tim Gouveia
 ---
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+Portfólio de áudios
