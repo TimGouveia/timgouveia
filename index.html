@@ -2,28 +2,18 @@
 <html lang="pt-BR">
 <head>
     <script>
-        if (location.protocol !== 'https:') {
-            location.replace(`https://${location.hostname}${location.pathname}`);
-        }
-    </script>
+  if (location.protocol !== 'https:') {
+    location.replace(`https://${location.hostname}${location.pathname}`);
+  }
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Otimizado -->
-    <title>Tim Gouveia | Locutor Profissional Comercial e Narrações</title>
-    <meta name="description" content="Locutor profissional com mais de 15 anos de experiência em locuções comerciais, podcasts e cursos EAD. Certificado pela SR - Escola de Locução">
-    <meta property="og:image" content="https://raw.githubusercontent.com/TimGouveia/portfolio/main/fotos/FOTO_TIM06.jpg">
-    
-    <!-- Pré-carregamento de recursos -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
-    
-    <!-- Estilos -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <title>Tim Gouveia | Locutor Profissional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* CSS Otimizado */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
         body {
             font-family: 'Montserrat', sans-serif;
             scroll-behavior: smooth;
@@ -47,43 +37,63 @@
             animation: wave 1.5s infinite ease-in-out;
         }
         
+        .wave:nth-child(2) { animation-delay: 0.2s; }
+        .wave:nth-child(3) { animation-delay: 0.4s; }
+        .wave:nth-child(4) { animation-delay: 0.6s; }
+        .wave:nth-child(5) { animation-delay: 0.8s; }
+        
         @keyframes wave {
             0%, 100% { transform: scaleY(0.3); }
             50% { transform: scaleY(1); }
         }
         
-        /* Melhor contraste para acessibilidade */
         .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1511671782772-c97d3e27a5d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1511671782772-c97d3e27a5d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
             background-size: cover;
             background-position: center;
         }
         
-        /* Transições simplificadas */
-        [class*="-thumbnail"], .audio-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .audio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-thumbnail {
+            transition: all 0.3s ease;
+        }
+        
+        .video-thumbnail:hover {
+            transform: scale(1.03);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .play-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .video-thumbnail:hover .play-icon {
+            transform: scale(1.2);
+            color: #8B0000;
         }
     </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SPYN880YVT"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-SPYN880YVT');
-    </script>
-</head>
+                <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SPYN880YVT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-SPYN880YVT');
+</script>
+</head>
 <body class="bg-gray-30 text-gray-800">
-    <!-- Navigation (Acessibilidade melhorada) -->
-    <nav class="bg-white shadow-md fixed w-full z-10" aria-label="Navegação principal">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
                     <span class="text-xl font-bold text-gray-800">TIM GOUVEIA</span>
                 </div>
-                
-                <!-- Menu Desktop -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100">Início</a>
@@ -93,10 +103,8 @@
                         <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100">Contato</a>
                     </div>
                 </div>
-                
-                <!-- Menu Mobile -->
                 <div class="md:hidden">
-                    <button id="menu-btn" class="text-gray-800 hover:text-gray-600 focus:outline-none" aria-label="Abrir menu" aria-expanded="false">
+                    <button id="menu-btn" class="text-gray-800 hover:text-gray-600 focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -104,9 +112,8 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Menu Mobile Expandido -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white" aria-hidden="true">
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Início</a>
                 <a href="#portfolio" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Portfólio</a>
@@ -117,62 +124,52 @@
         </div>
     </nav>
 
-    <!-- Seção Hero (Alt text corrigido) -->
+    <!-- Hero Section -->
     <section id="home" class="hero-bg text-white pt-32 pb-20 px-4 md:px-0">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Olá, eu sou <span class="text-amber-600">Tim Gouveia</span></h1>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Olá, eu sou <span class="text-orange-500">Tim Gouveia</span></h1>
                 <p class="text-xl mb-8">Locutor profissional com mais de 15 anos de experiência. Faço locuções comerciais, podcasts e cursos EAD. Tenho certificado de locutor pela SR - Escola de Locução</p>
-                
-                <div class="audio-wave mb-8" aria-hidden="true">
+                <div class="audio-wave mb-8">
                     <div class="wave"></div>
                     <div class="wave"></div>
                     <div class="wave"></div>
                     <div class="wave"></div>
                     <div class="wave"></div>
                 </div>
-                
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://open.spotify.com/show/434dJ0v2iNwoamm1MXu5t3" target="_blank" rel="noopener noreferrer" 
-                       class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300 inline-flex items-center justify-center">
-                        <i class="fab fa-spotify mr-2"></i> Podcast no Spotify
-                    </a>
-                    <button id="commercial-btn" 
-                            class="bg-gray-700 hover:bg-gray-800 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300 inline-flex items-center justify-center"
-                            aria-label="Reproduzir apresentação pessoal">
-                        <i class="fas fa-play mr-2"></i> Apresentação pessoal
-                    </button>
-                </div>
+                   <a href="https://open.spotify.com/show/434dJ0v2iNwoamm1MXu5t3" target="_blank" rel="noopener noreferrer" 
+                   class="ml-4 bg-orange-500 hover:bg-orange-500 text-white px-6 py-3 rounded-md font-medium transition duration-300 inline-flex items-center">
+                    <i class="fab fa-spotify mr-2"></i> Podcast no Spotify
+                </a>
+                <button id="commercial-btn" class="ml-4 bg-gray-700 hover:bg-gray-800 text-white px-6 py-3 rounded-md font-medium transition duration-300 inline-flex items-center">
+                    <i class="fas fa-play mr-2"></i> Apresentação pessoal
+                </button>
                 <audio id="commercial-sample" src="https://raw.githubusercontent.com/TimGouveia/portfolio/main/APRESENTACAO_FINAL.mp3"></audio>
             </div>
-            
             <div class="md:w-1/2 flex justify-center">
                 <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-red-800 shadow-xl">
-                    <img src="https://raw.githubusercontent.com/TimGouveia/portfolio/main/fotos/FOTO_TIM06.jpg" 
-                         alt="Tim Gouveia, locutor profissional" 
-                         class="w-full h-full object-cover"
-                         loading="lazy">
+                    <img src="https://raw.githubusercontent.com/TimGouveia/portfolio/refs/heads/main/fotos/FOTO_TIM06.jpg" alt="Tim Gouveia" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção Portfólio (Filtros ativados) -->
+    <!-- Portfolio Section -->
     <section id="portfolio" class="py-20 px-4 bg-white">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold text-center mb-12">Portfólio de Áudios</h2>
             
-            <!-- Filtros Ativos -->
-            <div class="flex flex-wrap justify-center mb-8">
+            <!-- Audio Categories -->
+            <div class="flex flex-wrap justify-center mb-8" style="display: none">
                 <button class="category-btn active px-4 py-2 mx-2 mb-2 bg-red-800 text-white rounded-md" data-category="all">Todos</button>
                 <button class="category-btn px-4 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 rounded-md" data-category="commercial">Comerciais</button>
                 <button class="category-btn px-4 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 rounded-md" data-category="narration">Narrações</button>
                 <button class="category-btn px-4 py-2 mx-2 mb-2 bg-gray-200 hover:bg-gray-300 rounded-md" data-category="podcast">Podcasts</button>
             </div>
             
-            <!-- Grid de Áudios (Exemplo de 1 item otimizado) -->
+            <!-- Audio Samples -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Comercial 1 -->
+                <!-- Commercial 1 -->
                 <div class="audio-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition duration-300 audio-sample" data-category="commercial">
                     <div class="p-4">
                         <h3 class="text-xl font-semibold mb-2">Locução Comercial</h3>
@@ -182,79 +179,421 @@
                                 <source src="https://raw.githubusercontent.com/TimGouveia/portfolio/main/LOCUCAO_COLOQUIAL_COM_TRILHA.mp3" type="audio/mpeg">
                                 Seu navegador não suporta o elemento de áudio.
                             </audio>
-                            <a href="https://raw.githubusercontent.com/TimGouveia/portfolio/main/LOCUCAO_COLOQUIAL_COM_TRILHA.mp3" download 
-                               class="ml-2 text-red-800 hover:text-red-900"
-                               aria-label="Baixar áudio">
+                            <a href="https://raw.githubusercontent.com/TimGouveia/portfolio/main/LOCUCAO_COLOQUIAL_COM_TRILHA.mp3" download class="ml-2 text-red-800 hover:text-red-900">
                                 <i class="fas fa-download text-xl"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Demais itens permanecem com estrutura similar -->
+                <!-- Narration 1 -->
+                <div class="audio-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition duration-300 audio-sample" data-category="narration">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Locução Standard</h3>
+                        <p class="text-gray-600 mb-4">Locução para campanha ficcional de banco - rádio.</p>
+                        <div class="flex items-center justify-between">
+                            <audio controls class="w-full">
+                                <source src="https://raw.githubusercontent.com/TimGouveia/portfolio/main/LOCUCAO_STANDARD_COM_TRILHA.mp3" type="audio/mpeg">
+                                Seu navegador não suporta o elemento de áudio.
+                            </audio>
+                            <a href="https://raw.githubusercontent.com/TimGouveia/portfolio/main/LOCUCAO_STANDARD_COM_TRILHA.mp3" download class="ml-2 text-red-800 hover:text-red-900">
+                                <i class="fas fa-download text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Podcast 1 -->
+                <div class="audio-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition duration-300 audio-sample" data-category="podcast">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Podcast - Entretenimento</h3>
+                        <p class="text-gray-600 mb-4">Trecho do Podcast Audiovisualizando - The Last of Us S02E01.</p>
+                        <div class="flex items-center justify-between">
+                            <audio controls class="w-full">
+                                <source src="https://raw.githubusercontent.com/TimGouveia/portfolio/main/AUDIOVISUALIZANDO_S02E01.mp3" type="audio/mpeg">
+                                Seu navegador não suporta o elemento de áudio.
+                            </audio>
+                            <a href="https://raw.githubusercontent.com/TimGouveia/portfolio/main/AUDIOVISUALIZANDO_S02E01.mp3" download class="ml-2 text-red-800 hover:text-red-900">
+                                <i class="fas fa-download text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Commercial 2 -->
+                <div class="audio-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition duration-300 audio-sample" data-category="commercial">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Locução Varejo</h3>
+                        <p class="text-gray-600 mb-4">Locução para campanha ficcional de loja de Eletrodomésticos.</p>
+                        <div class="flex items-center justify-between">
+                            <audio controls class="w-full">
+                                <source src="https://raw.githubusercontent.com/TimGouveia/portfolio/main/LOCUCAO_VAREJO_COM_TRILHA.mp3" type="audio/mpeg">
+                                Seu navegador não suporta o elemento de áudio.
+                            </audio>
+                            <a href="https://raw.githubusercontent.com/TimGouveia/portfolio/main/LOCUCAO_VAREJO_COM_TRILHA.mp3" download class="ml-2 text-red-800 hover:text-red-900">
+                                <i class="fas fa-download text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Narration 2 -->
+                <div class="audio-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition duration-300 audio-sample" data-category="narration">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Locução Institucional</h3>
+                        <p class="text-gray-600 mb-4">Locução para campanha Institucional da Faculdade Univiçosa.</p>
+                        <div class="flex items-center justify-between">
+                            <audio controls class="w-full">
+                                <source src="https://raw.githubusercontent.com/TimGouveia/portfolio/main/UNIVICOSA_COM_TRATAMENTO.mp3" type="audio/mpeg">
+                                Seu navegador não suporta o elemento de áudio.
+                            </audio>
+                            <a href="https://raw.githubusercontent.com/TimGouveia/portfolio/main/UNIVICOSA_COM_TRATAMENTO.mp3" download class="ml-2 text-red-800 hover:text-red-900">
+                                <i class="fas fa-download text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Podcast 2 -->
+                <div class="audio-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition duration-300 audio-sample" data-category="podcast">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">Locução Comercial</h3>
+                        <p class="text-gray-600 mb-4">Locução para campanha da Empresa Microbiota Brasil.</p>
+                        <div class="flex items-center justify-between">
+                            <audio controls class="w-full">
+                                <source src="https://raw.githubusercontent.com/TimGouveia/portfolio/main/MICROBIOTA_BRASIL.mp3" type="audio/mpeg">
+                                Seu navegador não suporta o elemento de áudio.
+                            </audio>
+                            <a href="https://raw.githubusercontent.com/TimGouveia/portfolio/main/MICROBIOTA_BRASIL.mp3" download class="ml-2 text-red-800 hover:text-red-900">
+                                <i class="fas fa-download text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Scripts no final do body -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Videos Section -->
+    <section id="videos" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Vídeos - Música e Comunicação</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video 1 -->
+                <div class="video-thumbnail rounded-lg overflow-hidden shadow-md bg-white">
+                    <div class="relative">
+                        <img src="https://i.ytimg.com/vi/E6Xvz6nUNec/hqdefault.jpg" alt="Video 1" class="w-full h-48 object-cover">
+                        <a href="https://youtu.be/E6Xvz6nUNec?si=GU3vQug0KeqTb-oB" target="_blank" class="absolute inset-0 flex items-center justify-center">
+                            <div class="play-icon bg-white bg-opacity-80 rounded-full p-4 text-red-800">
+                                <i class="fas fa-play text-2xl"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">Experiência em canto</h3>
+                        <p class="text-gray-600">Onde anda você, de Hermano Silva e Vinícius de Moraes.</p>
+                    </div>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="video-thumbnail rounded-lg overflow-hidden shadow-md bg-white">
+                    <div class="relative">
+                        <img src="https://i.ytimg.com/vi/LOCsX15wLZo/hqdefault.jpg" alt="Video 2" class="w-full h-48 object-cover">
+                        <a href="https://www.instagram.com/reel/Cu15SuQOZ3bV8Fzy2_8TcMr9dGc-Q59es--s_Y0/" target="_blank" class="absolute inset-0 flex items-center justify-center">
+                            <div class="play-icon bg-white bg-opacity-80 rounded-full p-4 text-red-800">
+                                <i class="fas fa-play text-2xl"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">Chamada para TV</h3>
+                        <p class="text-gray-600">Semana do Fazendeiro - Universidade Federal de Viçosa.</p>
+                    </div>
+                </div>
+                
+                <!-- Video 3 -->
+                <div class="video-thumbnail rounded-lg overflow-hidden shadow-md bg-white">
+                    <div class="relative">
+                        <img src="https://i.ytimg.com/vi/RshNhNDGj5E/hqdefault.jpg" alt="Video 3" class="w-full h-48 object-cover">
+                        <a href="https://youtu.be/RshNhNDGj5E" target="_blank" class="absolute inset-0 flex items-center justify-center">
+                            <div class="play-icon bg-white bg-opacity-80 rounded-full p-4 text-red-800">
+                                <i class="fas fa-play text-2xl"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">Trio Lútica</h3>
+                        <p class="text-gray-600">Dear Prudence - Beatles (cover)</p>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://www.youtube.com/@jtjcomufv" target="_blank" class="inline-flex items-center px-6 py-3 bg-red-800 hover:bg-red-900 text-white rounded-md font-medium transition duration-300">
+                    <i class="fab fa-youtube mr-2"></i> Ver mais no YouTube
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Sobre Mim</h2>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-red-800 shadow-lg">
+                        <img src="https://github.com/TimGouveia/portfolio/blob/main/fotos/BONE_T1.jpg?raw=true" alt="Tim Gouveia" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <div class="md:w-2/3 md:pl-12">
+                    <p class="text-lg mb-6">
+                        Com mais de 15 anos de experiência em canto e locução, Tim Gouveia traz uma locução versátil e confiável. Sua trajetória inclui trabalhos musicais e em comunicação para empresas, universidades, produtoras de conteúdo, emissoras de rádio e TV, além de trabalhos próprios, como o Podcast Audiovisualizando, disponível no Spotify.
+                    </p>
+                    
+                    <p class="text-lg mb-6">
+                        Formado em Comunicação Social com especialização em Jornalismo, Tim combina técnica com apreço artístico para entregar trabalhos que se destacam pela clareza e profissionalismo.
+                    </p>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4 text-red-800">Equipamentos e Configuração</h3>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <li class="flex items-center">
+                                <i class="fas fa-microphone text-red-800 mr-2"></i>
+                                <span>Microfone Behringer B2</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-microphone text-red-800 mr-2"></i>
+                                <span>Microfone Shure SM58</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-sliders-h text-red-800 mr-2"></i>
+                                <span>Interface de áudio Behringer UMC22</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-laptop text-red-800 mr-2"></i>
+                                <span>Software Adobe Audition</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-red-800">Depoimentos</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
+                            <div class="bg-gray-50 p-4 rounded-lg flex items-start gap-4">
+                                <img src="https://raw.githubusercontent.com/TimGouveia/portfolio/main/fotos/SARA.jpeg?raw=true"
+                                    alt="Sara Brunelli"
+                                    class="w-16 h-16 rounded-lg object-cover border-2 border-red-500">
+                                <div class="flex-1">
+                                    <p class="italic mb-2">"A voz do Tim é muito agradável de ouvir. É um respiro bom no meio de tantas produções super aceleradas, mas sem ficar monótona. A dicção, entonação… tudo me prende de uma forma leve! Me sinto batendo um papo, mesmo só ouvindo. Já faz parte da rotina, toda semana 🥰"</p>
+                                    <p class="font-semibold">— Sara Brunelli, jornalista de moda e consultora de estilo</p>
+                            </div>
+                        </div>
+                             <div class="bg-gray-50 p-4 rounded-lg flex items-start gap-4">
+                                 <img src="https://raw.githubusercontent.com/TimGouveia/portfolio/main/fotos/KITIM.jpeg?raw=true"
+                                      alt="Carlos Mendes"
+                                      class="w-16 h-16 rounded-lg object-cover border-2 border-red-500">
+                                 <div class="flex-1">
+                                      <p class="italic mb-2">"As locuções do Tim em nossos projetos foram impecáveis. A entonação e o ritmo transmitiram exatamente a mensagem desejada."</p>
+                                      <p class="font-semibold">— Marcos Kitim, Videomaker</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12">Contato</h2>
+                                   
+                <div class="md:w-1/2 md:pl-8">
+                    <h3 class="text-xl font-semibold mb-6">Me encontre aqui</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-red-800 rounded-full p-3 text-white">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                                 <div class="ml-4">
+                                <h4 class="text-lg font-medium">E-mail</h4>
+                                <p class="text-gray-600">jtjcomufv@gmail.com</p>
+                                <a href="mailto:jtjcomufv@gmail.com" target="_blank" class="text-red-800 hover:text-red-900 font-medium inline-flex items-center mt-1">
+                                    <i class="fas fa-external-link-alt mr-1"></i> Enviar e-mail
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-red-800 rounded-full p-3 text-white">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium">WhatsApp</h4>
+                                <p class="text-gray-600">+55 (31) 97148-1737</p>
+                                <a href="https://wa.me/5531971481737" target="_blank" class="text-red-800 hover:text-red-900 font-medium inline-flex items-center mt-1">
+                                    <i class="fas fa-external-link-alt mr-1"></i> Enviar mensagem
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-red-800 rounded-full p-3 text-white">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium">LinkedIn</h4>
+                                <p class="text-gray-600">Tim Gouveia</p>
+                                <a href="https://www.linkedin.com/in/tim-gouveia-74668245/" target="_blank" class="text-red-800 hover:text-red-900 font-medium inline-flex items-center mt-1">
+                                    <i class="fas fa-external-link-alt mr-1"></i> Ver perfil
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-red-800 rounded-full p-3 text-white">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium">Instagram</h4>
+                                <p class="text-gray-600">@timgouveia3</p>
+                                <a href="https://www.instagram.com/timgouveia3/" target="_blank" class="text-red-800 hover:text-red-900 font-medium inline-flex items-center mt-1">
+                                    <i class="fas fa-external-link-alt mr-1"></i> Seguir
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-xl font-bold">TIM GOUVEIA</span>
+                    <p class="text-gray-400 mt-1">Locutor Profissional</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                  <a href="https://www.instagram.com/timgouveia3/" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tim-gouveia-74668245/" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@jtjcomufv" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Tim Gouveia. Todos os direitos reservados.</p>
+                <p class="mt-1">Desenvolvido com paixão por profissionais criativos.</p>
+            </div>
+        </div>
+    </footer>
+
     <script>
-        // Código JavaScript otimizado
-        document.addEventListener('DOMContentLoaded', () => {
-            // Menu Mobile
-            const menuBtn = document.getElementById('menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            menuBtn.addEventListener('click', () => {
-                const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-                menuBtn.setAttribute('aria-expanded', !isExpanded);
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Controle de Áudio
-            const commercialBtn = document.getElementById('commercial-btn');
-            const commercialSample = document.getElementById('commercial-sample');
-            
-            commercialBtn.addEventListener('click', () => {
-                if (commercialSample.paused) {
-                    commercialSample.play();
-                    commercialBtn.innerHTML = '<i class="fas fa-pause mr-2"></i> Pausar';
-                } else {
-                    commercialSample.pause();
-                    commercialBtn.innerHTML = '<i class="fas fa-play mr-2"></i> Apresentação pessoal';
-                }
-            });
-
-            // Filtros de Categoria
-            document.querySelectorAll('.category-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    document.querySelectorAll('.category-btn').forEach(b => {
-                        b.classList.remove('active', 'bg-red-800', 'text-white');
-                        b.classList.add('bg-gray-200', 'hover:bg-gray-300');
-                    });
-                    
-                    btn.classList.add('active', 'bg-red-800', 'text-white');
-                    const category = btn.dataset.category;
-                    
-                    document.querySelectorAll('.audio-sample').forEach(sample => {
-                        sample.style.display = (category === 'all' || sample.dataset.category === category) 
-                            ? 'block' 
-                            : 'none';
-                    });
-                });
-            });
-
-            // Scroll Suave
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        mobileMenu.classList.add('hidden');
-                        menuBtn.setAttribute('aria-expanded', 'false');
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Commercial sample button
+        const commercialBtn = document.getElementById('commercial-btn');
+        const commercialSample = document.getElementById('commercial-sample');
+        
+        commercialBtn.addEventListener('click', () => {
+            if (commercialSample.paused) {
+                commercialSample.play();
+                commercialBtn.innerHTML = '<i class="fas fa-pause mr-2"></i> Pausar';
+            } else {
+                commercialSample.pause();
+                commercialBtn.innerHTML = '<i class="fas fa-play mr-2"></i> Apresentação pessoal';
+            }
+        });
+        
+        // Audio category filtering
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        const audioSamples = document.querySelectorAll('.audio-sample');
+        
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                categoryBtns.forEach(b => b.classList.remove('active', 'bg-red-800', 'text-white'));
+                categoryBtns.forEach(b => b.classList.add('bg-gray-200', 'hover:bg-gray-300'));
+                
+                // Add active class to clicked button
+                btn.classList.add('active', 'bg-red-800', 'text-white');
+                btn.classList.remove('bg-gray-200', 'hover:bg-gray-300');
+                
+                const category = btn.dataset.category;
+                
+                // Show/hide audio samples based on category
+                audioSamples.forEach(sample => {
+                    if (category === 'all' || sample.dataset.category === category) {
+                        sample.style.display = 'block';
+                    } else {
+                        sample.style.display = 'none';
                     }
                 });
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        const formSuccess = document.getElementById('form-success');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to a server
+            // For this example, we'll just show the success message
+            formSuccess.classList.remove('hidden');
+            contactForm.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                formSuccess.classList.add('hidden');
+            }, 5000);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
             });
         });
     </script>
